@@ -1,0 +1,8 @@
+{
+  "name": "sendgrid_webhook_lamdba",
+  "description": "Handle sendgrid events. two things. 1) proxy unsubcribe events to URL 2) Log all events to S3",
+  "memory": 128,
+  "runtime": "golang",
+  "timeout": 10,
+  "role": ""
+}
