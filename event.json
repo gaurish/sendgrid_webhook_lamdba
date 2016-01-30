@@ -1,9 +1,121 @@
-{
-  "email": "jad@example.com",
-  "event": "unsubscribe",
-  "category": [
-    "45-hot-dog-notification",
-    "999",
-    "FreeCampaign"
-  ]
-}
+[
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"processed",
+      "category":"cat facts",
+      "sg_event_id":"30XSMcYzLaKrV34NujdUMg==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"deferred",
+      "category":"cat facts",
+      "sg_event_id":"yAIWh5wt7HhmOd9GpyEWtQ==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "response":"400 try again later",
+      "attempt":"5"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"delivered",
+      "category":"cat facts",
+      "sg_event_id":"bzl5OriUr3N5Ld68VT86yw==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "response":"250 OK"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"open",
+      "category":"cat facts",
+      "sg_event_id":"92335MEY3kFzq1hseREabw==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "useragent":"Mozilla/4.0 (compatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
+      "ip":"255.255.255.255"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"click",
+      "category":"cat facts",
+      "sg_event_id":"7DLoJLTZ1WOa6nB86Tcscw==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "useragent":"Mozilla/4.0 (compatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
+      "ip":"255.255.255.255",
+      "url":"http://www.sendgrid.com/"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"bounce",
+      "category":"cat facts",
+      "sg_event_id":"oX8U4-ohdzxPbQUgvxEFIw==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "reason":"500 unknown recipient",
+      "status":"5.0.0"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"dropped",
+      "category":"cat facts",
+      "sg_event_id":"B2NoKQ7CPIasUyUvAEOesg==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "reason":"Bounced Address",
+      "status":"5.0.0"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"spamreport",
+      "category":"cat facts",
+      "sg_event_id":"_t7FGVYro3kVqWX3zoT-UA==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"unsubscribe",
+      "category":"cat facts",
+      "sg_event_id":"x1PJbNZHPkVosq1TXPnhkA==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0"
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"group_unsubscribe",
+      "category":"cat facts",
+      "sg_event_id":"RrCf6pDZbxr6wB6bWXrqmA==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "useragent":"Mozilla/4.0 (compatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
+      "ip":"255.255.255.255",
+      "url":"http://www.sendgrid.com/",
+      "asm_group_id":10
+   },
+   {
+      "email":"example@test.com",
+      "timestamp":1454151728,
+      "smtp-id":"\u003c14c5d75ce93.dfd.64b469@ismtpd-555\u003e",
+      "event":"group_resubscribe",
+      "category":"cat facts",
+      "sg_event_id":"CKukYpVvzjFG4sB2g-9UHg==",
+      "sg_message_id":"14c5d75ce93.dfd.64b469.filter0001.16648.5515E0B88.0",
+      "useragent":"Mozilla/4.0 (compatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
+      "ip":"255.255.255.255",
+      "url":"http://www.sendgrid.com/",
+      "asm_group_id":10
+   }
+]
