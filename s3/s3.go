@@ -29,8 +29,8 @@ func filename(account string) string {
 	b := make([]byte, 16)
 	Random.Read(b)
 	currentTime := time.Now()
-	return fmt.Sprintf("%v/%v/%v-%x-%x-%x-%x-%x",
-		account, currentTime.Year(), currentTime.Month, currentTime.Unix(), b[0:4], b[4:6], b[6:8], b[8:10], b[10:])
+	return fmt.Sprintf("%v/%v/%v/%v/%v-%x-%x-%x-%x-%x.json",
+		account, currentTime.Year(), currentTime.Month(), currentTime.Day(), currentTime.Unix(), b[0:4], b[4:6], b[6:8], b[8:10], b[10:])
 }
 
 func Upload(event []byte, filePrefix string) error {
