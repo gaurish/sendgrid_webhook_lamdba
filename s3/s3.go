@@ -42,9 +42,10 @@ func Upload(event []byte, filePrefix string) error {
 
 	log.Println("[S3] Using File name -> ", key)
 	uploadResult, err := svc.PutObject(&s3.PutObjectInput{
-		Body:   bytes.NewReader(event),
-		Bucket: &S3Bucket,
-		Key:    &key,
+		Body:        bytes.NewReader(event),
+		Bucket:      &S3Bucket,
+		Key:         &key,
+		ContentType: aws.String("application/json"),
 	})
 	log.Println("[S3]", uploadResult)
 	return err

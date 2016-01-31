@@ -4,15 +4,19 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	"log"
 	"net/http"
 	"os"
 )
 
 type Message struct {
-	Event, Email string
+	Event string
 }
 
-type Messages []Message
+type Params struct {
+	Account  string
+	Messages []Message
+}
 
 func Request(event []byte) error {
 	url := os.Getenv("PROXY_HOST_URL")
@@ -33,12 +37,9 @@ func Request(event []byte) error {
 	return nil
 }
 
-func Process(event json.RawMessage) error {
-	var messages Messages
-	if err := json.Unmarshal(event, &messages); err != nil {
-		return err
-	}
+func Process(event json.RawMessage, messages []Message) error {
 	for _, message := range messages {
+		log.Println(message)
 		if message.Event == "unsubscribe" {
 			err := Request(event)
 			return err

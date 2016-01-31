@@ -15,7 +15,7 @@ func Test_S3Upload(t *testing.T) {
      {
         "event":"deferred"
      }
-  ]}`)
-	err := s3.Upload(b, "mamafus")
+  ], "account": "foo"}`)
+	err := s3.Upload(b, "foo")
 	assert.NoError(t, err, "file should be uploaded to s3")
 }

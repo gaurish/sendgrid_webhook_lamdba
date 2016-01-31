@@ -1,6 +1,7 @@
 package proxy_test
 
 import (
+	"encoding/json"
 	"testing"
 
 	"github.com/gaurish/sendgrid_webhook_lambda/proxy"
@@ -15,7 +16,9 @@ func Test_Process(t *testing.T) {
        {
           "event":"deferred"
        }]`)
-	err := proxy.Process(b)
+	var params proxy.Params
+	json.Unmarshal(b, &params)
+	err := proxy.Process(b, params.Messages)
 	assert.NoError(t, err, "request should be proxied")
 }
 
@@ -28,6 +31,8 @@ func Test_Request(t *testing.T) {
             "event":"deferred"
          }
       ]}`)
+	var params proxy.Params
+	json.Unmarshal(b, &params)
 	err := proxy.Request(b)
 	assert.NoError(t, err, "request should be proxied")
 }

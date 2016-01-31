@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"log"
 
 	"github.com/apex/apex"
@@ -9,20 +10,20 @@ import (
 	"github.com/gaurish/sendgrid_webhook_lambda/s3"
 )
 
-type Response struct {
-	Status string
-}
-
 func main() {
 	apex.HandleFunc(func(event json.RawMessage, ctx *apex.Context) (interface{}, error) {
 		log.Println(string(event))
-		if err := proxy.Process(event); err != nil {
+		var params proxy.Params
+		if err := json.Unmarshal(event, &params); err != nil {
 			return nil, err
 		}
-		if err := s3.Upload(event, "caps"); err != nil {
+		if err := proxy.Process(event, params.Messages); err != nil {
 			return nil, err
 		}
-		return &Response{"Upload to S3 - OK. Proxy Request - OK"}, nil
+		if err := s3.Upload(event, params.Account); err != nil {
+			return nil, err
+		}
+		return nil, errors.New("Upload to S3 - OK. Proxy Request - OK")
 	})
 
 }
