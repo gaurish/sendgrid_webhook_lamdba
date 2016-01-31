@@ -10,12 +10,12 @@ import (
 )
 
 type Response struct {
-	status string
+	Status string
 }
 
 func main() {
 	apex.HandleFunc(func(event json.RawMessage, ctx *apex.Context) (interface{}, error) {
-		log.Println(event)
+		log.Println(string(event))
 		if err := proxy.Process(event); err != nil {
 			return nil, err
 		}
