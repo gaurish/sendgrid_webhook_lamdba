@@ -14,8 +14,8 @@ type Message struct {
 }
 
 type Params struct {
-	Account  string
-	Messages []Message
+	Account string
+	Body    []Message
 }
 
 func Request(event []byte) error {

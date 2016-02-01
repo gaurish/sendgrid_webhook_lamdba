@@ -9,21 +9,21 @@ import (
 )
 
 func Test_Process(t *testing.T) {
-	b := []byte(`[
+	b := []byte(`{"body": [
        {
           "event":"unsubscribe"
        },
        {
           "event":"deferred"
-       }]`)
+       }]}`)
 	var params proxy.Params
 	json.Unmarshal(b, &params)
-	err := proxy.Process(b, params.Messages)
+	err := proxy.Process(b, params.Body)
 	assert.NoError(t, err, "request should be proxied")
 }
 
 func Test_Request(t *testing.T) {
-	b := []byte(`{"events":[
+	b := []byte(`{"body":[
          {
             "event":"unsubcribed"
          },

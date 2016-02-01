@@ -17,7 +17,7 @@ func main() {
 		if err := json.Unmarshal(event, &params); err != nil {
 			return nil, err
 		}
-		if err := proxy.Process(event, params.Messages); err != nil {
+		if err := proxy.Process(event, params.Body); err != nil {
 			return nil, err
 		}
 		if err := s3.Upload(event, params.Account); err != nil {
