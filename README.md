@@ -10,7 +10,7 @@ Lambda is a service by Amazon which allows you write functions which can be invo
 ```sh
 $ go get github.com/gaurish/sendgrid_webhook_lamdba
 ```
-
+The API is not yet stable. Please use a tool like [Godep](https://github.com/tools/godep) to vendor dependencies in your project.
 
 ## Features
 
