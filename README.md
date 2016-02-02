@@ -1,7 +1,9 @@
 Sendgrid Event Webhook Lambda
 =====
 
-An AWS Lambda function written in Go which listens to Sendgrid's Event Webhook for email events. SendGrid’s Event Webhook will notify a URL of your choice via HTTP POST with information about events that occur as SendGrid processes your email but it generates a lot of events. the incoming data can easily overload your web server & bring down your production.
+An AWS Lambda function written in Go which listens to Sendgrid's Event Webhook for email events. 
+
+SendGrid’s Event Webhook will notify a URL of your choice via HTTP POST with information about events that occur as SendGrid processes your email but it generates a lot of events. the incoming data can easily overload your web server & bring down your production.
 
 ### Enter AWS Lambda & API Gateway
 Lambda is a service by Amazon which allows you write functions which can be invoked via HTTP API using API Gateway. 
@@ -15,9 +17,9 @@ The API is not yet stable. Please use a tool like [Godep](https://github.com/too
 ## Features
 
 
-- Serverless Architecture. Infinitly scalable. First 1 million requests per month are free
-- Writes all the events from Sendgrid to AWS S3 as JSON files which can then later we loaded into database of your choice for any analytisis.
-- Proxyies HTTP POSTs which have have unsubcribe in them
+- Serverless Architecture. Infinitely scalable. First 1 million requests per month are free
+- Writes all the events from Sendgrid to AWS S3 as JSON files which can then later we loaded into database of your choice for any analysis.
+- Proxies HTTP POSTs which have have unsubcribe in them
 - Logs Events to CloudWatch, so you can search them for your operational needs(debugging missing emails etc)
 - End to End Acceptance Tests which you can run locally on your development machine using `go test` command. Resulting in Faster development time. 
 
@@ -73,7 +75,7 @@ Apex provides an handy invoke features, you can use the same here.
 $ cat event.json | apex invoke --logs webhook
 ```
 
-The above command will POS the contents to `event.json` file to lambda & execute the function. The logs of the execution will be available in the terminal itself. so it doesn't require you to leave the terminal. 
+The above command will POST the contents to `event.json` file to lambda & execute the function. The logs of the execution will be available in the terminal itself. so it doesn't require you to leave the terminal. 
 
 
 ## Steps to contribute:
