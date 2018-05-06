@@ -1,0 +1,13 @@
+# Config file for webhooks
+
+[servers]
+
+	[servers.server1]
+		host = "https://example.com"
+		enabled = true
+		events = ['unsubscribe']
+
+	[servers.server2]
+		host = "https://gaurishsharma.com"
+		enable = false
+		events = [] #sents all events
